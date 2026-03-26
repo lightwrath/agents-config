@@ -61,7 +61,7 @@
 - Every controller gets full Swagger decoration: `[ApiController]`, `[LogicalApiVersion]`, `[SwaggerTag]`, standard error response codes (401, 403, 404, 400, 500), `[Produces]`, `[Consumes]`.
 - Each action method has `[HttpGet/Post/etc]`, `[SwaggerOperation]`, `[SwaggerResponse]`, `[Authorize(Policy = ...)]`.
 - Use `nameof()` for route names: `Name = nameof(GetOrganizationRolesV1)`.
-- Controllers use primary constructors for DI, extending a `ControllerBase`.
+- Controllers extend `ControllerBase`.
 
 ### Service & Repository Pattern
 - Services define contracts via interfaces in a separate `Interface/` folder.
@@ -84,7 +84,6 @@
 - Use nullable reference types consistently: `string?`, `Guid?`, `User?`.
 - Prefer `FirstOrDefault()` + explicit null check over `First()`.
 - Use pattern matching for null and property checks.
-- Use null-coalescing `??` for defaults.
 
 ### Guard Clauses
 
@@ -102,7 +101,6 @@
 - Use default exports for components, named exports for hooks and utilities.
 
 ### TypeScript Typing
-- Prefix interfaces with `I`, type aliases with `T`.
 - Prefer `Array<T>` over `T[]` and `ReadonlyArray<T>` for immutable parameters.
 - Use `as const` assertions for constant arrays and derive union types from them.
 - Use generics for reusable classes and hooks.
@@ -112,7 +110,6 @@
 - Use React Context + custom hooks for app-level state — no Redux.
 - Use TanStack Query (React Query) for all server state.
 - Query key factory pattern for organized cache keys.
-- Class-based domain models are acceptable when modelling complex stateful entities (e.g., `ActiveVoucher`, `Organisation`, `Access`).
 
 ### API Integration
 - Create custom query hooks with naming convention `use[Entity]Query`.
@@ -151,7 +148,6 @@ Follow this order (no comment separators needed, just consistent grouping):
 ### Middleware
 - Authentication middleware is inline in the route index, not in a separate file.
 - Middleware order: logging > authentication > pre-validation > route handlers.
-- Every route handler has its own `try/catch`.
 
 ### Config
 - Centralized `config.ts` module using `dotenv`.
@@ -189,8 +185,9 @@ Personal full-stack projects use a `client/` + `server/` split without workspace
 No Lerna, no npm workspaces — just two independent `package.json` files.
 
 ### Functional by Default
-Uses functions and module closures as the primary unit of organisation. Classes are used only when:
+Functions and module closures are the primary unit of organisation. Use classes when:
 - A framework requires them (e.g., Phaser scene hierarchy).
-- Modelling stateful domain objects (e.g., `Queue`, `Config`).
+- The method operates on state that is accessed frequently — prefer a class to encapsulate that state.
 - Providing a static utility namespace (e.g., `Controller`, `FileSystem`).
-  Everything else is plain functions, arrow functions for callbacks, and `function` declarations for named top-level exports.
+
+Everything else is plain functions, arrow functions for callbacks, and `function` declarations for named top-level exports.
