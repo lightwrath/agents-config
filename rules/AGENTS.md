@@ -79,6 +79,8 @@
 ### DTO Mapping
 - Prefer manual mapping with `.Select()` or object initializers over AutoMapper when the mapping is straightforward.
 - Use AutoMapper only when the existing codebase already uses it or when mappings are complex.
+- Use a single `Save{Entity}Dto` for create and update when the request shapes are identical — do not create separate `Create{Entity}Dto` and `Update{Entity}Dto` files.
+- Keep existing ID conventions consistent — use `int` for entity IDs to stay consistent with the existing codebase unless explicitly told otherwise.
 
 ### Null Handling
 - Use nullable reference types consistently: `string?`, `Guid?`, `User?`.
@@ -105,11 +107,13 @@
 - Use `as const` assertions for constant arrays and derive union types from them.
 - Use generics for reusable classes and hooks.
 - Use standalone type guard functions.
+- No JSDoc comments on interface properties — keep interface definitions concise; do not add `/** ... */` doc comments to individual props.
 
 ### State Management
 - Use React Context + custom hooks for app-level state — no Redux.
 - Use TanStack Query (React Query) for all server state.
 - Query key factory pattern for organized cache keys.
+- When syncing TanStack Query results into local React state, set the state directly inside the `queryFn` callback rather than using a separate `useEffect` on the query's `data`.
 
 ### API Integration
 - Create custom query hooks with naming convention `use[Entity]Query`.
@@ -136,6 +140,7 @@ Follow this order (no comment separators needed, just consistent grouping):
 ### JSX Patterns
 - Conditional rendering with `&&`:
 - Early return pattern for complex conditional branches — avoid deeply nested ternaries.
+- Early-return for the primary/editable case — in conditional rendering within `.map()` or similar loops, handle the primary (editable/interactive) branch first with an early return, then fall through to the secondary (static/read-only) branch.
 - Null coalescing for defaults in JSX: `recipient={transaction.CounterPartyName ?? '-'}`.
 - Always provide explicit keys in `.map()` rendering.
 
