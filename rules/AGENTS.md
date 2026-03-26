@@ -17,7 +17,6 @@
 | Styled components | Descriptive name or `Styled` prefix | `Row`, `Cell`, `StyledContainer` |
 
 ### Error Handling Philosophy
-
 - Always validate inputs early. Prefer throwing descriptive exceptions from the service layer rather than returning error objects.
 - Use `try/catch` at boundary layers (controllers, route handlers, API call sites) — not deep in business logic.
 - Error messages must include context about what failed: `"Reserved organization number could not be found"`, not `"Not found"`.
@@ -26,7 +25,6 @@
 - In React: use error state values or thrown errors — never silently swallow failures.
 
 ### Async Patterns
-
 - Always use `async/await`. Never use raw `.then()` promise chains.
 - In C#: always propagate `CancellationToken` through the entire call chain — controller to service to repository.
 - In C#: use `await using` for disposable async resources (transactions, connections).
@@ -34,14 +32,12 @@
 - In TypeScript: use `Promise.all()` to parallelize independent async operations.
 
 ### Code Organization
-
 - Controllers and route handlers must be thin. They handle authorization, call services, and return responses. Business logic belongs in services or domain models.
 - Keep type/interface definitions in dedicated files or directories (`types/`, or colocated `*.types.ts`).
 - Colocate tests with source files where possible (`.cy.ts` next to `.tsx`, test classes in the same project).
 - Use barrel exports (`index.ts`) for module boundaries.
 
 ### Documentation Style
-
 - Use XML docs (`<summary>`, `<example>`, `<remarks>`) on public C# DTOs and API-facing models.
 - Use inline comments only to explain **why**, not **what**. The code should be self-documenting for the "what".
 - Do not over-comment. If a block of code needs extensive comments, refactor it to be clearer instead.
