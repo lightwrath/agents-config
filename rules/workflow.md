@@ -95,6 +95,7 @@ Work through `implementation_tasks.md` in order, tackling one task at a time. Fo
 - Implement only what is needed to make the current test pass
 - Build the application and run the test suite
 - Mark the task as complete in `implementation_tasks.md` and update the handoff notes before ending the session
+- Once the build and tests are passing, commit the changes for that task
 
 **Checkpoint:** All tests must pass and the build must succeed before proceeding to the next phase. Any failures must be resolved before moving on.
 
