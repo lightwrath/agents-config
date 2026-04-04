@@ -64,23 +64,50 @@ Define the contract before implementation:
 
 ---
 
-### Phase 5 — Implementation
-Implement the solution:
-- Write the full feature or module
-- Build the application and run the test suite
+### Phase 5 — Prioritisation
+Review all failing tests from Phase 4 and produce an `implementation_tasks.md` file within the vertical slice or module folder. This file orders the tests from simplest (least change required) to most complex (e.g., end-to-end tests that exercise the full feature).
 
-**Checkpoint:** All tests must pass and the build must succeed before proceeding. Any failures must be resolved at this stage.
+Each task in the file should be treated as an individual unit of work — one failing test to make pass. Between sessions, the AI reads this file to understand current progress and picks up from where the previous session left off.
+
+The file format is as follows:
+
+```markdown
+# [Feature Name] — Implementation Tasks
+
+## Agent Handoff Notes
+_Use this section to pass context to the next session — decisions made, blockers encountered, and current state._
 
 ---
 
-### Phase 6 — Manual Review
+## Task Queue
+
+Complete tasks in order. Mark each as `[x]` before starting the next session.
+
+- [ ] 1. Short description — test type (e.g. unit)
+  - File: `path/to/test.ts:line`
+  - Notes:
+```
+
+---
+
+### Phase 6 — Implementation
+Work through `implementation_tasks.md` in order, tackling one task at a time. For each task:
+- Implement only what is needed to make the current test pass
+- Build the application and run the test suite
+- Mark the task as complete in `implementation_tasks.md` and update the handoff notes before ending the session
+
+**Checkpoint:** All tests must pass and the build must succeed before proceeding to the next phase. Any failures must be resolved before moving on.
+
+---
+
+### Phase 7 — Manual Review
 The developer reviews the implementation:
 - Read through all changes
 - Make any manual edits as needed
 
 ---
 
-### Phase 7 — AI Code Review
+### Phase 8 — AI Code Review
 The AI performs a comprehensive code review of the feature and all related changes:
 - Review for correctness, clarity, consistency, and adherence to conventions
 - Produce a list of findings
@@ -89,7 +116,7 @@ Developer and AI go through the findings together. Any items that need resolving
 
 ---
 
-### Phase 8 — Commit
+### Phase 9 — Commit
 Before committing, run the full test suite and build the application one final time.
 
 **Checkpoint:** All tests must pass and the build must succeed. Any failures must be resolved before the commit is made.
