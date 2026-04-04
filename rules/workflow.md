@@ -123,6 +123,7 @@ Work through `implementation_tasks.md` in order, tackling one task at a time. Fo
 The developer reviews the implementation:
 - Read through all changes
 - Make any manual edits as needed
+- Review any manual changes that were required and run the `remember-manual-changes` skill to analyse the alterations and distil them into new or improved rules in `coding_conventions.md`
 
 ---
 

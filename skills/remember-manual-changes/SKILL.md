@@ -7,7 +7,7 @@ description: Compare initial generated code to changes made manually and create 
 
 Investigate the changes that have been made since the initial version was created.
 Based on the changes that had to be made from the original version.
-Create rules to enforce these practices and add them into the suitable places into the .kilocode/rules/Agents.md file.
+Create rules to enforce these practices and add them into the suitable places into the .kilocode/rules/coding_conventions.md file.
 Should a rule overlap or already exist then try to improve upon it so the intentions are clearer.
 Try to keep rules to a short, single line entry per rule.
 
