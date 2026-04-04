@@ -46,12 +46,21 @@ The AI explores the codebase to gather context relevant to the objective:
 
 ---
 
-#### Phase 3 — Critique
-A sparring session between developer and AI:
-- Reflect on the plan from Phase 1 against the findings from Phase 2
-- Challenge assumptions and raise questions
-- Evaluate whether the proposed approach is suitable
-- Agree on the implementation strategy before proceeding
+#### Phase 3 — Design Interview
+The AI interviews the developer relentlessly about every aspect of the plan until both sides reach a shared understanding. The goal is to walk down each branch of the design tree, resolving dependencies between decisions one by one.
+
+**How it works:**
+- The AI identifies every open question, assumption, and decision point in the plan from Phase 1, informed by what was discovered in Phase 2
+- Questions are asked one at a time (or in small, focused groups when closely related), starting from the decisions that other decisions depend on
+- If a question can be answered by exploring the codebase, the AI investigates first and presents its findings rather than asking the developer
+- Each answer narrows the design space — the AI tracks what has been resolved and what remains open
+- The interview continues until there are no unresolved branches: every design decision has been made and every dependency between decisions is satisfied
+
+**Principles:**
+- No question is too small — surface implicit assumptions early
+- Follow dependency order: resolve foundational choices before downstream ones
+- Present what you learned from the codebase; only ask the developer what the codebase cannot answer
+- Summarise the resolved design tree at the end to confirm shared understanding
 
 No code is written in this phase.
 
