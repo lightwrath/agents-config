@@ -90,7 +90,7 @@ Define the contract before implementation:
 ---
 
 #### Phase 6 — Prioritisation
-Review all failing tests from Phase 4 and produce an `implementation_tasks.md` file within the vertical slice or module folder. This file orders the tests from simplest (least change required) to most complex (e.g., end-to-end tests that exercise the full feature).
+Review all failing tests from Phase 5 and produce an `implementation_tasks.md` file within the vertical slice or module folder. This file orders the tests from simplest (least change required) to most complex (e.g., end-to-end tests that exercise the full feature).
 
 Each task in the file should be treated as an individual unit of work — one failing test to make pass. Between sessions, the AI reads this file to understand current progress and picks up from where the previous session left off.
 
