@@ -78,7 +78,7 @@ Conclude the planning phase before any code is written:
 
 ---
 
-### Implementation Segment
+### Contract Definition Segment
 
 #### Phase 5 — Interface & Test Definition
 Define the contract before implementation:
@@ -89,7 +89,21 @@ Define the contract before implementation:
 
 ---
 
-#### Phase 6 — Prioritisation
+#### Phase 6 — Interface & Test Review
+The developer reviews the scaffolded interfaces and tests against the feature specification:
+- Read through the interfaces and tests, comparing them against the feature spec
+- Make any edits needed to correct or improve them
+- The AI assists on request (e.g., "does this interface cover this part of the spec?")
+
+No implementation code is written in this phase.
+
+**Checkpoint:** After the review, the scaffold is considered locked. Any changes from this point forward require revisiting the feature specification.
+
+---
+
+### Implementation Segment
+
+#### Phase 7 — Prioritisation
 Review all failing tests from Phase 5 and produce an `implementation_tasks.md` file within the vertical slice or module folder. This file orders the tests from simplest (least change required) to most complex (e.g., end-to-end tests that exercise the full feature).
 
 Each task in the file should be treated as an individual unit of work — one failing test to make pass. Between sessions, the AI reads this file to understand current progress and picks up from where the previous session left off.
@@ -115,7 +129,7 @@ Complete tasks in order. Mark each as `[x]` before starting the next session.
 
 ---
 
-#### Phase 7 — Implementation
+#### Phase 8 — Implementation
 Work through `implementation_tasks.md` in order, tackling one task at a time. For each task:
 - Implement only what is needed to make the current test pass
 - Build the application and run the test suite
@@ -128,7 +142,7 @@ Work through `implementation_tasks.md` in order, tackling one task at a time. Fo
 
 ### Review Segment
 
-#### Phase 8 — Manual Review
+#### Phase 9 — Manual Review
 The developer reviews the implementation:
 - Read through all changes
 - Make any manual edits as needed
@@ -136,7 +150,7 @@ The developer reviews the implementation:
 
 ---
 
-#### Phase 9 — AI Code Review
+#### Phase 10 — AI Code Review
 The AI performs a comprehensive code review of the feature and all related changes:
 - Review for correctness, clarity, consistency, and adherence to conventions
 - Produce a list of findings
@@ -145,7 +159,7 @@ Developer and AI go through the findings together. Any items that need resolving
 
 ---
 
-#### Phase 10 — Commit
+#### Phase 11 — Commit
 Before committing, run the full test suite and build the application one final time.
 
 **Checkpoint:** All tests must pass and the build must succeed. Any failures must be resolved before the commit is made.
