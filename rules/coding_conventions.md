@@ -46,6 +46,12 @@
 
 ## C# / .NET Conventions
 
+### Solution & Project Naming
+- .NET solution files and project folder names use all-lowercase dot-separated names — e.g. `sylvan.root.sln`, `sylvan.root.api/`, `sylvan.root.tests/`.
+- The API project carries an explicit `.api` suffix to distinguish it from the solution name — `sylvan.root.api`, not `sylvan.root`.
+- Project folder names, csproj filenames, and solution entry names must all be consistent with each other (e.g. folder `sylvan.root.api/` → csproj `sylvan.root.api.csproj` → solution entry `"sylvan.root.api"`).
+- C# root namespaces follow PascalCase dot-separated convention derived from the project name — `Sylvan.Root.Api`, `Sylvan.Root.Tests`.
+
 ### Variable Declarations
 - Always use `var` for local variable declarations. Explicit types are almost never used for locals.
 
