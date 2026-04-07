@@ -21,8 +21,6 @@ Define the objective clearly:
 
 This forms the brief for the rest of the workflow.
 
-**After this phase:** Review `ubiquitous_language.md` and add any new terms that arise from the objective.
-
 ---
 
 #### Phase 2 — Exploration
@@ -56,11 +54,13 @@ No code is written in this phase.
 ---
 
 #### Phase 4 — Planning Wrap-up
-Conclude the planning phase before any code is written:
-- Review `ubiquitous_language.md` in light of the critique discussions and update any terms that have been refined or added
-- Confirm that all criticisms from Phase 3 have been addressed and the agreed approach is clearly reflected in the feature specification document
-- Ensure the feature specification document is complete and ready to serve as the source of truth going forward
+Write out the complete, detailed findings from the entire planning process:
+- Summarise the objective and the rationale behind it
+- Document all design decisions made during the Design Interview, including the reasoning behind each choice
+- Record any constraints, dependencies, and areas of impact identified during exploration
+- Confirm that all open questions from Phase 3 have been resolved and document their outcomes
+- Produce the feature specification document for the vertical slice or module, ensuring it is complete and ready to serve as the source of truth going forward
 
-**Commit:** Commit `ubiquitous_language.md` and the feature specification document. This marks the end of the planning phase.
+**Commit:** Commit the feature specification document. This marks the end of the planning phase.
 
 **Handoff:** Inform the developer that planning is complete. The next step is the **Contract Definition Segment** — invoke the `workflow-define` skill to continue.

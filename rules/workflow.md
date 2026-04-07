@@ -27,7 +27,7 @@ The workflow is divided into four segments, each facilitated by a dedicated skil
 | Skill | Segment | Phases | Mode |
 |---|---|---|---|
 | workflow-plan | Segment 1 — Planning | 1–4 | — |
-| workflow-define | Segment 2 — Contract Definition | 1–3 | — |
+| workflow-define | Segment 2 — Contract Definition | 1–4 | — |
 | workflow-implement-autonomous | Segment 3 — Implementation | 1 | Non-interactive — AI works autonomously, no questions asked |
 | workflow-implement-interactive | Segment 3 — Implementation | 1 | Interactive — AI and developer work through the implementation together |
 | workflow-review | Segment 4 — Review | 1–4 | — |
