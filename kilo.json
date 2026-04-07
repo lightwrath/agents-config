@@ -1,0 +1,35 @@
+{
+	"$schema": "https://app.kilo.ai/config.json",
+	"provider": {
+		"ollama": {
+			"npm": "@ai-sdk/openai-compatible",
+			"name": "Ollama (local)",
+			"options": {
+				"baseURL": "http://192.168.1.116:11434/v1"
+			},
+			"models": {
+				"qwen3.5:35b": {
+					"name": "qwen3.5:35b",
+					"limit": {
+						"context": 163840,
+						"output": 65536
+					}
+				}
+			}
+		}
+	},
+	"mcp": {
+		"playwright": {
+			"type": "local",
+			"command": [
+				"npx", 
+				"-y", 
+				"@playwright/mcp@latest",
+				"--browser=chromium",
+				"--executable-path", "/usr/bin/chromium"
+			],
+			"environment": {},
+			"enabled": true
+		}
+	}
+}
