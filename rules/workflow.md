@@ -24,9 +24,10 @@ Each project maintains a `ubiquitous_language.md` file at the project root. This
 
 The workflow is divided into four segments, each facilitated by a dedicated skill:
 
-| Skill | Segment | Phases |
-|---|---|---|
-| workflow-plan | Segment 1 — Planning | 1–4 |
-| workflow-define | Segment 2 — Contract Definition | 1–2 |
-| workflow-implement | Segment 3 — Implementation | 1–2 |
-| workflow-review | Segment 4 — Review | 1–4 |
+| Skill | Segment | Phases | Mode |
+|---|---|---|---|
+| workflow-plan | Segment 1 — Planning | 1–4 | — |
+| workflow-define | Segment 2 — Contract Definition | 1–3 | — |
+| workflow-implement-autonomous | Segment 3 — Implementation | 1 | Non-interactive — AI works autonomously, no questions asked |
+| workflow-implement-interactive | Segment 3 — Implementation | 1 | Interactive — AI and developer work through the implementation together |
+| workflow-review | Segment 4 — Review | 1–4 | — |
