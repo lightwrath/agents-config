@@ -61,4 +61,6 @@ Conclude the planning phase before any code is written:
 - Confirm that all criticisms from Phase 3 have been addressed and the agreed approach is clearly reflected in the feature specification document
 - Ensure the feature specification document is complete and ready to serve as the source of truth going forward
 
-**Commit:** Commit `ubiquitous_language.md` and the feature specification document. This marks the end of the planning phase — everything that follows is defining and implementation.
+**Commit:** Commit `ubiquitous_language.md` and the feature specification document. This marks the end of the planning phase.
+
+**Handoff:** Inform the developer that planning is complete. The next step is the **Contract Definition Segment** — invoke the `workflow-define` skill to continue.
