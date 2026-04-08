@@ -23,10 +23,10 @@ Work through the phase below, using the todo list to track progress.
 
 #### Phase 1 — Implementation
 
-Work through `implementation_tasks.md` in order, tackling one task at a time. For each task:
+Work through the Task Queue in `workflow_tracking.md` in order, tackling one task at a time. For each task:
 - Implement only what is needed to make the current test pass
 - Build the application and run the test suite
-- Mark the task as `[x]` in `implementation_tasks.md` and update the handoff notes at the end of the session, before closing
+- Mark the task as `[x]` in `workflow_tracking.md` and update the handoff notes at the end of the session, before closing
 - Once the build and tests are passing, commit the changes for that task
 
 If a build or test failure cannot be resolved without leaving the working directory or requiring external access, document the blocker in the handoff notes and stop. Do not attempt workarounds that violate the operational constraints above.

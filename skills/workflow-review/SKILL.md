@@ -1,6 +1,6 @@
 ---
 name: workflow-review
-description: Start and facilitate the review segment of the development workflow (Segment 4, Phases 1–4).
+description: Start and facilitate the review segment of the development workflow (Segment 4, Phases 1–5).
 ---
 
 # Instructions
@@ -42,7 +42,16 @@ Developer and AI go through the findings together. Any items that need resolving
 
 ---
 
-#### Phase 4 — Commit
+#### Phase 4 — Cleanup
+Delete the following files from the project root:
+- `workflow_tracking.md`
+- The plan file referenced within `workflow_tracking.md`
+
+These files are no longer needed once the feature has been reviewed and is ready to be committed.
+
+---
+
+#### Phase 5 — Commit
 Before committing, run the full test suite and build the application one final time.
 
 **Checkpoint:** All tests must pass and the build must succeed. Any failures must be resolved before the commit is made.

@@ -17,13 +17,13 @@ In this mode, the AI and the developer are working as a pair. The AI proposes, t
 
 #### Phase 1 — Implementation (Paired)
 
-Work through `implementation_tasks.md` in order, one task at a time. For each task, the AI and developer work together:
+Work through the Task Queue in `workflow_tracking.md` in order, one task at a time. For each task, the AI and developer work together:
 
 1. **Discuss before implementing** — the AI describes its intended approach for the task. The developer reviews and confirms, suggests changes, or flags concerns before any code is written.
 2. **Implement together** — the AI writes the implementation. The developer reviews each change as it is made. If the developer raises a concern mid-implementation, stop and discuss before continuing.
 3. **Verify together** — build the application and run the test suite. Both parties review the output. If tests fail, discuss the failure and the fix before proceeding.
 4. **Agree before committing** — the AI proposes a commit message. The developer approves before the commit is made.
-5. **Update the task file** — mark the task as `[x]` in `implementation_tasks.md` and update the handoff notes at the end of the session, before closing. Confirm with the developer before doing so.
+5. **Update the task file** — mark the task as `[x]` in `workflow_tracking.md` and update the handoff notes at the end of the session, before closing. Confirm with the developer before doing so.
 
 **At no point should the AI move to the next task without the developer's acknowledgement that the current task is complete.**
 

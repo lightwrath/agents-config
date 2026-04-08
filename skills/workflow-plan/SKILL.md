@@ -47,20 +47,14 @@ The AI interviews the developer relentlessly about every aspect of the plan unti
 - Present what you learned from the codebase; only ask the developer what the codebase cannot answer
 - Summarise the resolved design tree at the end to confirm shared understanding
 
-No code is written in this phase.
-
-**After this phase:** Write the feature specification document for the vertical slice or module.
-
 ---
 
 #### Phase 4 — Planning Wrap-up
-Write out the complete, detailed findings from the entire planning process:
+Write out the complete, detailed findings from the entire planning process to a markdown file:
 - Summarise the objective and the rationale behind it
 - Document all design decisions made during the Design Interview, including the reasoning behind each choice
 - Record any constraints, dependencies, and areas of impact identified during exploration
 - Confirm that all open questions from Phase 3 have been resolved and document their outcomes
 - Produce the feature specification document for the vertical slice or module, ensuring it is complete and ready to serve as the source of truth going forward
-
-**Commit:** Commit the feature specification document. This marks the end of the planning phase.
 
 **Handoff:** Inform the developer that planning is complete. The next step is the **Contract Definition Segment** — invoke the `workflow-define` skill to continue.
