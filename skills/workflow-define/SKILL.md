@@ -10,8 +10,8 @@ Guide the developer through the **Contract Definition Segment** (Segment 2) of t
 Work through each phase in order, using the todo list to track progress:
 - **Phase 1** creates the workflow tracking file for this feature.
 - **Phase 2** establishes the ubiquitous language for the feature.
-- **Phase 3** produces the scaffold — interfaces and failing tests.
-- **Phase 4** is a developer-led review of that scaffold against the feature specification. The AI assists on request. No implementation code is written.
+- **Phase 3** defines the failing tests only — no changes to the underlying project are made.
+- **Phase 4** is a developer-led review of the defined tests against the feature specification. The AI assists on request. No implementation code is written.
 - **Phase 5** orders the failing tests into a prioritised implementation task list, ready for the implementation segment.
 
 ---
@@ -48,32 +48,33 @@ Review the feature specification and all planning findings, then update `ubiquit
 
 ---
 
-#### Phase 3 — Interface & Test Definition
-Define the contract before implementation:
-- Define the interface for the vertical slice or module
-- Write the test suite that validates the expected behaviour
+#### Phase 3 — Test Definition
+Write the tests that define the expected behaviour. **No changes are made to the underlying project** — no interfaces, no implementation stubs, no scaffolding of any kind. Only test files are created or modified.
 
-**Checkpoint:** The application must still build successfully. The newly defined tests are expected to fail at this stage — this confirms they are correctly targeting behaviour that has not yet been implemented.
+- Write the test suite that validates the expected behaviour of the feature
+- Tests must import from the production code paths they will eventually exercise, but the production code itself is not created or modified here
+
+**Checkpoint:** The tests must exist and target the correct behaviour. They are expected to fail (or fail to compile) at this stage — that is intentional and confirms the tests are correctly pointing at behaviour that has not yet been implemented. Do not attempt to make the project build or the tests pass.
 
 ---
 
-#### Phase 4 — Interface & Test Review
-The developer reviews the scaffolded interfaces and tests against the feature specification:
-- Read through the interfaces and tests, comparing them against the feature spec
+#### Phase 4 — Test Review
+The developer reviews the defined tests against the feature specification:
+- Read through the tests, comparing them against the feature spec
 - Make any edits needed to correct or improve them
-- The AI assists on request (e.g., "does this interface cover this part of the spec?")
+- The AI assists on request (e.g., "does this test cover this part of the spec?")
 
-No implementation code is written in this phase.
+No implementation code or production scaffolding is written in this phase.
 
-**Checkpoint:** After the review, the scaffold is considered locked. Any changes from this point forward require revisiting the feature specification.
+**Checkpoint:** After the review, the tests are considered locked. Any changes from this point forward require revisiting the feature specification.
 
-**Commit:** Commit the interfaces and tests. This marks the end of the contract definition phase — everything that follows is implementation.
+**Commit:** Commit the tests. This marks the end of the contract definition phase — everything that follows is implementation.
 
 ---
 
 #### Phase 5 — Prioritisation
 
-Review all failing tests and append an implementation task queue to `workflow_tracking.md` at the project root. This section orders the tests from simplest (least change required) to most complex (e.g., end-to-end tests that exercise the full feature).
+Review all failing tests and append an implementation task queue to `workflow_tracking.md` at the project root. Order the tasks by estimated implementation effort — not by the complexity of the test itself, but by how much production code needs to be written or changed to make that test pass. The simplest tasks (least implementation work) come first; the most complex (e.g., a test that requires the full feature to be wired together end-to-end) come last.
 
 Each task should be treated as an individual unit of work — one failing test to make pass. Between sessions, the AI reads this file to understand current progress and picks up from where the previous session left off.
 
