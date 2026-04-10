@@ -7,7 +7,7 @@ description: Start and facilitate the review segment of the development workflow
 
 Guide the developer through the **Review Segment** (Segment 4) of the development workflow.
 
-Work through each phase in order, using the todo list to track progress.
+Work through each phase in order, using `workflow_tracking.md` to track progress.
 
 ---
 

@@ -7,7 +7,7 @@ description: Start and facilitate the planning segment of the development workfl
 
 Guide the developer through the **Planning Segment** (Segment 1, Phases 1–4) of the development workflow.
 
-Work through each phase in order, using the todo list to track progress. No code is written during this segment.
+Work through each phase in order, using `workflow_tracking.md` to track progress. No code is written during this segment.
 
 ---
 
@@ -57,4 +57,4 @@ Write out the complete, detailed findings from the entire planning process to a 
 - Confirm that all open questions from Phase 3 have been resolved and document their outcomes
 - Produce the feature specification document for the vertical slice or module, ensuring it is complete and ready to serve as the source of truth going forward
 
-**Handoff:** Inform the developer that planning is complete. The next step is the **Contract Definition Segment** — invoke the `workflow-define` skill to continue.
+**Handoff:** Inform the developer that planning is complete. The next step is the **Test Definition Segment** — invoke the `workflow-define` skill to continue.
