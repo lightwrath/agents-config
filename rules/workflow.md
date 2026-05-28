@@ -17,17 +17,3 @@ Each vertical slice or module includes a specification document that defines the
 
 ## Ubiquitous Language
 Each project maintains a `ubiquitous_language.md` file at the project root. This file defines the canonical terms used throughout the project — by both developer and AI — to ensure shared understanding and consistent communication.
-
----
-
-## Development Workflow
-
-The workflow is divided into four segments, each facilitated by a dedicated skill:
-
-| Skill | Segment | Phases | Mode |
-|---|---|---|---|
-| workflow-plan | Segment 1 — Planning | 1–4 | — |
-| workflow-define | Segment 2 — Test Definition | 1–3 | — |
-| workflow-implement-autonomous | Segment 3 — Implementation | 1–2 | Non-interactive — AI works autonomously, no questions asked |
-| workflow-implement-interactive | Segment 3 — Implementation | 1 | Interactive — AI and developer work through the implementation together |
-| workflow-review | Segment 4 — Review | 1–5 | — |

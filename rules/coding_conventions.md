@@ -81,6 +81,7 @@
 ### DTO Mapping
 - Prefer manual mapping with `.Select()` or object initializers over AutoMapper when the mapping is straightforward.
 - Use AutoMapper only when the existing codebase already uses it or when mappings are complex.
+- When defining paired API payload DTOs, use explicit `RequestDto` and `ResponseDto` suffixes.
 - Use a single `Save{Entity}Dto` for create and update when the request shapes are identical — do not create separate `Create{Entity}Dto` and `Update{Entity}Dto` files.
 - Keep existing ID conventions consistent — use `int` for entity IDs to stay consistent with the existing codebase unless explicitly told otherwise.
 
