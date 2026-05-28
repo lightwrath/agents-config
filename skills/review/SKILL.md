@@ -52,6 +52,6 @@ Before committing:
 
 **Checkpoint:** All tests pass, the build succeeds, and the working tree contains only the intended changes.
 
-Once the checkpoint is green, commit the changes with a concise message that reflects the purpose of the reviewed work.
+Once the checkpoint is green, commit any uncommitted changes with a concise message that reflects the purpose of the reviewed work. Do not create an empty commit when there are no uncommitted changes.
 
-At the end, provide a concise summary of review findings, ubiquitous language updates, verification results, the commit created, and any residual risks or assumptions.
+At the end, provide a concise summary of review findings, ubiquitous language updates, verification results, commit status, and any residual risks or assumptions.

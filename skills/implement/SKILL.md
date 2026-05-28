@@ -1,6 +1,6 @@
 ---
 name: implement
-description: Implement an approved plan autonomously using a TDD green and blue flow, then build, test, review, and commit the result.
+description: Implement an approved plan autonomously using a TDD green and blue flow, then build, test, and review the result.
 ---
 
 # Instructions
@@ -83,12 +83,12 @@ Carry out a review of the whole application after implementation is complete:
 - Build the application again
 - Run the test suite again
 - Ensure there are no further modifications needed
-- Once the build and tests are passing and review is complete, commit the changes
+- Leave the changes uncommitted for the `review` skill
 
 The review must not include modifying tests, and no test files may be changed in this phase.
 
 If review findings cannot be resolved without leaving the working directory or requiring external access, document the blocker in the final summary and stop.
 
-**Checkpoint:** The review is only complete when the identified issues have been resolved, the build succeeds, all tests pass, no further modifications are needed, and the changes have been committed.
+**Checkpoint:** The review is only complete when the identified issues have been resolved, the build succeeds, all tests pass, no further modifications are needed, and the changes have been left uncommitted for the `review` skill.
 
-At the end, provide a concise summary of the baseline failures, implementation, refactor work, verification results, review findings, commit created, and any blockers or assumptions.
+At the end, provide a concise summary of the baseline failures, implementation, refactor work, verification results, review findings, uncommitted change status, and any blockers or assumptions.
