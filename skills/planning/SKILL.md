@@ -59,8 +59,8 @@ The AI interviews the developer relentlessly about every aspect of the plan unti
 
 ---
 
-#### Phase 4 - Plan And Diagram Write-up
-Write out the complete plan and diagram artifacts.
+#### Phase 4 - Plan Write-up
+Write out the complete markdown plan artifact.
 
 The markdown plan file must include:
 - Objective and rationale.
@@ -72,6 +72,15 @@ The markdown plan file must include:
 - Required implementation changes, grouped by affected feature, module, layer, or file area.
 - Testing and verification considerations.
 - Risks, edge cases, and follow-up work if any.
+
+The markdown plan should be complete enough to serve as the source of truth for `tdd-red`, `implement`, and `review` when those skills are used.
+
+---
+
+#### Phase 5 - Diagram Write-up
+Create the Mermaid HTML diagram artifact.
+
+Planning mode cannot write the HTML diagram file. Switch to code mode before creating the file, then write it with a suitable name to `diagrams/<file>.html` in the current working directory.
 
 The HTML diagram file must:
 - Load Mermaid.js from a CDN.

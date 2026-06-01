@@ -9,7 +9,7 @@ Guide the developer through the red phase of TDD for a planned change.
 
 The objective is to turn an existing plan into a focused set of tests, implement those tests, and verify that they fail before any production implementation is written.
 
-Only edit test files during this skill. Do not implement production code, change project code, alter application behavior, or add production scaffolding. If a test cannot compile because the planned production interface does not exist yet, leave the test expressing the intended contract and report the compile failure as an expected red-phase result.
+Only edit test projects or unit/integration test files during this skill. Test-scoped helpers, fixtures, mocks, and setup code may be added when they live inside the test project or test file area. Do not change the product under test: no production deployed code, production configuration, application behavior, production interfaces, or production scaffolding may be added or modified. If a test cannot compile because the planned production interface does not exist yet, leave the test expressing the intended contract and report the compile failure as an expected red-phase result.
 
 ---
 
@@ -46,9 +46,9 @@ The AI should:
 - Reuse existing test helpers, fixtures, factories, mocks, and setup patterns where appropriate.
 - Keep tests focused on observable behavior rather than implementation details.
 - Avoid broad snapshot tests unless the project already uses them for the same kind of behavior.
-- Do not modify production behavior, project code, configuration, or non-test scaffolding.
+- Do not modify production behavior, production project code, deployed configuration, production interfaces, or non-test scaffolding.
 
-If new test utilities are needed, keep them minimal and test-scoped.
+If new test utilities are needed, keep them minimal and scoped to the test project or test file area.
 
 ---
 
