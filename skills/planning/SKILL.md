@@ -9,6 +9,8 @@ Guide the developer through a planning process that produces a complete set of p
 
 No code is written during this skill.
 
+This skill must not start implementation work. If a mode switch is required, it is only for creating the Mermaid HTML diagram artifact described in Phase 5. After that artifact is created, stop and provide the planning summary instead of continuing into `tdd-red`, `implement`, code edits, tests, or any other implementation step.
+
 The output of the skill is:
 - A markdown plan file that serves as the written source of truth for the change.
 - An HTML diagram file that uses Mermaid.js to visualize the current system and planned changes.
@@ -80,7 +82,9 @@ The markdown plan should be complete enough to serve as the source of truth for 
 #### Phase 5 - Diagram Write-up
 Create the Mermaid HTML diagram artifact.
 
-Planning mode cannot write the HTML diagram file. Switch to code mode before creating the file, then write it with a suitable name to `diagrams/<file>.html` in the current working directory.
+Planning mode cannot write the HTML diagram file. Switch to code mode only to create this file, then write it with a suitable name to `diagrams/<file>.html` in the current working directory.
+
+The code-mode switch is strictly scoped to writing the Mermaid HTML diagram artifact. Do not modify application code, tests, configuration, dependencies, or any other project files during this switch. Do not begin implementation after creating the diagram, even if the markdown plan is complete and actionable.
 
 The HTML diagram file must:
 - Load Mermaid.js from a CDN.
