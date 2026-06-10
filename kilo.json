@@ -2,16 +2,16 @@
   "$schema": "https://app.kilo.ai/config.json",
   "provider": {
     "ollama": {
-      "npm": "@ai-sdk/openai-compatible",
       "name": "Ollama (local)",
+      "npm": "@ai-sdk/openai-compatible",
       "options": {
         "baseURL": "http://192.168.1.116:11434/v1"
       },
       "models": {
-        "gemma4:26b": {
-          "name": "gemma4:26b",
+        "gemma4:e4b": {
+          "name": "gemma4:e4b",
           "limit": {
-            "context": 262144,
+            "context": 131072,
             "output": 65536
           }
         }
@@ -29,8 +29,10 @@
         "--executable-path",
         "/usr/bin/chromium"
       ],
-      "environment": {},
       "enabled": true
     }
+  },
+  "indexing": {
+    "enabled": true
   }
 }
